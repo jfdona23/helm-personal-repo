@@ -39,8 +39,6 @@ securityContext: {}
 env:
   name: PORT
   value: "8000"
-  
-port: 8000
 
 service:
   type: NodePort
