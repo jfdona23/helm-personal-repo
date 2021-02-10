@@ -26,5 +26,4 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.GH_ACTIONS_TOKEN }}"
         with:
-          # The GitHub Pages URL to the charts repo (default: https://<owner>.github.io/<repo>)
           charts_repo_url: https://github.com/jfdona23/helm-personal-repo
