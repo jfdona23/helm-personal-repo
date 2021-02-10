@@ -37,12 +37,13 @@ securityContext: {}
   # runAsUser: 1000
 
 env:
-  name: PORT
-  value: "8000"
+  port_name: PORT
+  port_value: "8000"
 
 service:
-  type: NodePort
-  port: 8000
+  type: LoadBalancer
+  port: 8080
+  targetPort: 8000
 
 ingress:
   enabled: false

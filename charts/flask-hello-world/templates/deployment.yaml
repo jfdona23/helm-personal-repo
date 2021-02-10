@@ -34,11 +34,11 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            - name: {{ .Values.env.name }}
-              value: "{{ .Values.env.value }}"
+            - name: {{ .Values.env.port_name }}
+              value: "{{ .Values.env.port_value }}"
           ports:
             - name: http
-              containerPort: {{ .Values.service.port }}
+              containerPort: {{ .Values.env.port_value }}
               protocol: TCP
           livenessProbe:
             httpGet:
