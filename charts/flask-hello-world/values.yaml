@@ -41,8 +41,8 @@ env:
   port_value: "8000"
 
 service:
-  type: LoadBalancer
-  port: 8080
+  type: NodePort
+  port: 8000
   targetPort: 8000
 
 ingress:
